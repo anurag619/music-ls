@@ -6,6 +6,7 @@ import webbrowser
 from google import search
 import sys
 
+
 def main():
  try:
   fbconsole.AUTH_SCOPE = ['user_likes' ]	#fbconsole authentication
@@ -16,8 +17,6 @@ def main():
    except:		#handling HTTP errors
     print "some error occured in your network, please try again after some time."
         
-
-   
 
 def music_names(music):		#parsing the music names
    music_list = music[0].values()
