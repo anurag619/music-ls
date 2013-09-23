@@ -2,8 +2,9 @@
 music-ls
 ========
 
-a script that plays songs in gaana.com according to your likes
---------------------------------------------------------------
+a simple app that plays songs in gaana.com according to your likes(fetched from facebook)
 
-work in progress
+::
+
+   work in progress
 

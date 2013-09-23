@@ -38,8 +38,5 @@ def music_names(music):		#parsing the music names
 if __name__=='__main__':
  main()
  sys.exit(0)
- 
-
-
 
 
