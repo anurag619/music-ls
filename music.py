@@ -20,20 +20,25 @@ def main():
 
 def music_names(music):
    music_list = music[0].values()
-   for name in music_list:
-    music_name = (choice(name.split(','))).encode('utf-8')
+   for name in music_list:		#fetch music names
+    music_name = (choice(name.split(',')),int(len())).encode('utf-8')
     for url in search('%s gaana' %music_name, stop=1):
       if re.search(ur'http://gaana.com', url, re.UNICODE):
-	      option = raw_input('now playing %s, N-> for next song; Press Y-> play :' %music_name)
+	      option = raw_input('now playing %s, N-> for next song; Press Y-> play :' %music_name) #user options
 	      if option == 'N':
 	          music_names(music)
 	      else:
-	          webbrowser.open_new_tab(url)
+	          webbrowser.open_new_tab(url)		#evoking gaana.com
       else:
           option1= raw_input( "your like doesn't match any song. N-> for next song: ")
 	  if option1 == 'N':
 	      music_names(music)
-          return
+      else:
+          option1= raw_input( "your like doesn't match any song. N-> for next song: ")
+	  if option1 == 'N':
+	   music_names(music)
+           return
+          
 
 if __name__=='__main__':
  main()
