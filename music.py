@@ -2,7 +2,6 @@
 
 import re
 import webbrowser
-import sys
 import fbconsole
 from google import search
 from random import choice
@@ -33,18 +32,10 @@ def music_names(music):
           option1= raw_input( "your like doesn't match any song. N-> for next song: ")
 	  if option1 == 'N':
 	      music_names(music)
-      else:
-          option1= raw_input( "your like doesn't match any song. N-> for next song: ")
-	  if option1 == 'N':
-	   music_names(music)
-           return
+      
+          
           
 
 if __name__=='__main__':
  main()
- sys.exit(0)
  
-
-
-
-
