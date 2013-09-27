@@ -7,6 +7,7 @@ from google import search
 from random import choice
 
 def main():
+	""" logs into Facebook account and asks for required permission. Further the music names are extracted from the profile"""
     try:
         fbconsole.AUTH_SCOPE = ['user_likes','publish_checkins' ]
         fbconsole.authenticate()
@@ -18,6 +19,8 @@ def main():
         
 
 def music_names(music):
+	"""the music names are then checked on the google for a valid url, which is then feeded into gaana.com"""
+	
    music_list = music[0].values()
    for name in music_list:		#fetch music names
     music_name = (choice(name.split(',')),int(len())).encode('utf-8')
