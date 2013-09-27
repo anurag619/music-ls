@@ -35,8 +35,6 @@ def music_names(music):
           option1= raw_input( "your like doesn't match any song. N-> for next song: ")
 	  if option1 == 'N':
 	      music_names(music)
-      
-          
           
 
 if __name__=='__main__':
