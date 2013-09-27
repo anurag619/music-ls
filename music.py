@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
+import fbconsole
 import re
 import webbrowser
-import fbconsole
 from google import search
 from random import choice
 
