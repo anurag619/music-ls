@@ -23,7 +23,7 @@ def music_names(music):
 	
    music_list = music[0].values()
    for name in music_list:		#fetch music names
-    music_name = (choice(name.split(',')),int(len())).encode('utf-8')
+    music_name = (choice(name.split(','))).encode('utf-8')
     for url in search('%s gaana' %music_name, stop=1):
       if re.search(ur'http://gaana.com', url, re.UNICODE):
 	      option = raw_input('now playing %s, N-> for next song; Press Y-> play :' %music_name) #user options
