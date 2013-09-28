@@ -1,0 +1,6 @@
+
+# This pulls all dependies required for music-ls
+
+
+fbconsole
+google==1.05
