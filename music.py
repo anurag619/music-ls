@@ -8,7 +8,6 @@ from random import choice
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-
 def main():
     """ logs into Facebook account and asks for permission.
  Further the music names are extracted from the profile"""
@@ -19,11 +18,10 @@ def main():
     music = fbconsole.fql("SELECT music FROM user  WHERE uid=me()")
     music_names(music)
     fbconsole.logout()
-      
-        
 
 def music_names(music):
-    """the music names are then checked on the google for a valid url, which is then feeded into gaana.com"""
+    """the music names are then checked on google
+ for a valid url, which is then feeded into gaana.com"""
    
     music_list = music[0].values()
     for name in music_list:		#fetch music names
