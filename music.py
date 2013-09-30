@@ -32,16 +32,23 @@ def music_names(music):
         if option == 'N':
          music_names(music)
         elif option == 'Y':
-         webdriver.Firefox().get(url)		#evoking gaana.com
+         webdriver.Firefox().get(url)     #evoking gaana.com
+        elif option =='Q':
+         sys.exit(0)		
         else:
-         sys.exit(0)
+         print "wrong option,please try again."
+         music_names(music)
+         
 	         		
        else:
         option= raw_input( "your like doesn't match any song. N-> for next song; Q--> quit: ")
         if option == 'N':
 	  music_names(music)
-	 
-	else: sys.exit(0)
+        elif option == 'Q':
+	 sys.exit(0)
+	else: 
+         print "wrong option,please try again."
+         music_names(music)
           
 
 if __name__=='__main__':
