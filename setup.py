@@ -6,7 +6,6 @@ from setuptools import find_packages, setup
 setup(name = 'music-ls',
     version = '0.1',
     description = "Script to play songs according to your taste in gaana.com",
-    long_description = long_description,
     platforms = ["Linux"],
     author = "Anurag",
     author_email = "anurag3rdsep@gmail.com",
