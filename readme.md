@@ -9,9 +9,8 @@ permissions to it.
 According to your likes in facebook 'music' column, the songs will be played in gaana.com. However you will have to click
 the 'play' bottom to start playing. :) 
 
-run the script
+run the script::
 
-::
 
     python music-ls.py
 
