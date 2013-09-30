@@ -4,3 +4,4 @@
 
 fbconsole
 google==1.05
+selenium
