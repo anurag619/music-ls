@@ -25,23 +25,23 @@ def music_names(music):
    
     music_list = music[0].values()
     for name in music_list:		#fetch music names
-    music_name = (choice(name.split(','))).encode('utf-8')
+     music_name = (choice(name.split(','))).encode('utf-8')
      for url in search('%s gaana' %music_name, stop=1):
-      if re.search(ur'http://gaana.com', url, re.UNICODE):
-       option = raw_input('now playing %s, N-> for next song; Press Y-> play; Q--> quit :' %music_name) #user options
-       if option == 'N':
-        music_names(music)
-       elif option == 'Y':
-        webdriver.Firefox().get(url)		#evoking gaana.com
-       else:
-        sys.exit(0)
-	         		
-      else:
-       option= raw_input( "your like doesn't match any song. N-> for next song; Q--> quit: ")
+       if re.search(ur'http://gaana.com', url, re.UNICODE):
+        option = raw_input('now playing %s, N-> for next song; Press Y-> play; Q--> quit :' %music_name) #user options
         if option == 'N':
-	 music_names(music)
+         music_names(music)
+        elif option == 'Y':
+         webdriver.Firefox().get(url)		#evoking gaana.com
+        else:
+         sys.exit(0)
+	         		
+       else:
+        option= raw_input( "your like doesn't match any song. N-> for next song; Q--> quit: ")
+        if option == 'N':
+	  music_names(music)
 	 
-	 else: sys.exit(0)
+	else: sys.exit(0)
           
 
 if __name__=='__main__':
