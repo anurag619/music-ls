@@ -12,7 +12,6 @@ def main():
     """ logs into Facebook account and asks for permission.
  Further the music names are extracted from the profile"""
    
-      
     fbconsole.AUTH_SCOPE = ['user_likes','publish_checkins' ]
     fbconsole.authenticate()
     music = fbconsole.fql("SELECT music FROM user  WHERE uid=me()")
@@ -37,9 +36,7 @@ def music_names(music):
          sys.exit(0)		
         else:
          print "wrong option,please try again."
-         music_names(music)
-         
-	         		
+         music_names(music)		
        else:
         option= raw_input( "your like doesn't match any song. N-> for next song; Q--> quit: ")
         if option == 'N':
