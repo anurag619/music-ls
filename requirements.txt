@@ -1,5 +1,5 @@
 
-# This pulls all dependies required for music-ls
+#these are required for music-ls
 
 
 fbconsole
