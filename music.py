@@ -20,7 +20,8 @@ def main():
       if song_name!='nothin':
        print "opening gaana to play your songs.Enjoy!"
        time.sleep(1)
-       driver = webdriver.Firefox().get("http://gaana.com")
+       driver = webdriver.Firefox()
+       driver.get("http://gaana.com")
        driver.find_element_by_id("keywordsearch").clear()
        driver.find_element_by_id("keywordsearch").send_keys(name)
        driver.find_element_by_id("btnsearch").click()
