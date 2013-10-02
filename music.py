@@ -43,9 +43,6 @@ def user_input():
     driver.find_element_by_css_selector("div.checkbx > input[name=\"chk\"]").click()
     driver.find_element_by_xpath("//div[@id='mainPlayer']/div[3]/div[2]/div[6]/a").click()
 
-    
-    
-
 def google_search(name):
     print 'searching...'
     for url in search('%s gaana' %name, stop=1):
@@ -53,7 +50,6 @@ def google_search(name):
             return name 
         else:
             return 'nothing'
-
 
 def fb_access():
     """ logs into Facebook account and asks for permission.
@@ -89,7 +85,6 @@ def music_names(music):
                 driver.find_element_by_css_selector("#tblheader1 > tbody > tr.GridV1BG > th[name=\"checkSelected\"] > div > input[name=\"checkSelected\"]").click()
                 time.sleep(1)
                 driver.find_element_by_link_text("Add to Queue").click()
-     
                 driver.find_element_by_link_text("Now Playing").click()
                 driver.find_element_by_css_selector("div.checkbx > input[name=\"chk\"]").click()
                 driver.find_element_by_xpath("//div[@id='mainPlayer']/div[3]/div[2]/div[6]/a").click()
