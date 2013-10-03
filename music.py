@@ -21,7 +21,9 @@ def main():
         main()
 
 def user_input():
-    user_input_name = input("Enter your song/artist: ").split(',')    
+    user_input_name = input("Enter your song/artist: ").split(',')  
+    print "please wait while we search for your entries.." 
+    print "opening gaana.com..." 
     driver = webdriver.Firefox()
     driver.get("http://gaana.com") 
     for name in user_input_name:
@@ -30,9 +32,9 @@ def user_input():
             driver.find_element_by_id("keywordsearch").clear()
             driver.find_element_by_id("keywordsearch").send_keys(name)
             driver.find_element_by_id("btnsearch").click()
-            time.sleep(2)
-            driver.find_element_by_css_selector("#tblheader1 > tbody > tr.GridV1BG > th[name=\"checkSelected\"] > div > input[name=\"checkSelected\"]").click()
             time.sleep(1)
+            driver.find_element_by_css_selector("#tblheader1 > tbody > tr.GridV1BG > th[name=\"checkSelected\"] > div > input[name=\"checkSelected\"]").click()
+            time.sleep(0.1)
             driver.find_element_by_link_text("Add to Queue").click()
     
         else:
@@ -44,7 +46,6 @@ def user_input():
     driver.find_element_by_xpath("//div[@id='mainPlayer']/div[3]/div[2]/div[6]/a").click()
 
 def google_search(name):
-    print 'searching...'
     for url in search('%s gaana' %name, stop=1):
         if re.search(ur'http://gaana.com', url, re.UNICODE):
             return name 
@@ -69,21 +70,22 @@ def music_names(music):
     for name in music_list:	#fetch music names
         music_name = (choice(name.split(','))).encode('utf-8')
         search = google_search(music_name)
-        print "please wait while we search for your entries.."
+        
         if search!= 'nothing':
             option = raw_input('now playing %s, N-> for next song; Press Y-> play; Q--> quit :' %search) #user options
             if option == 'N':
                 music_names(music)
             elif option == 'Y':
+                print "please wait while we search for your entries.."
                 time.sleep(1)
                 driver = webdriver.Firefox()
                 driver.get("http://gaana.com")
                 driver.find_element_by_id("keywordsearch").clear()
                 driver.find_element_by_id("keywordsearch").send_keys(search)
                 driver.find_element_by_id("btnsearch").click()
-                time.sleep(2)
-                driver.find_element_by_css_selector("#tblheader1 > tbody > tr.GridV1BG > th[name=\"checkSelected\"] > div > input[name=\"checkSelected\"]").click()
                 time.sleep(1)
+                driver.find_element_by_css_selector("#tblheader1 > tbody > tr.GridV1BG > th[name=\"checkSelected\"] > div > input[name=\"checkSelected\"]").click()
+                time.sleep(0.1)
                 driver.find_element_by_link_text("Add to Queue").click()
                 driver.find_element_by_link_text("Now Playing").click()
                 driver.find_element_by_css_selector("div.checkbx > input[name=\"chk\"]").click()
