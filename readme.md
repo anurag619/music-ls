@@ -2,7 +2,7 @@
 music-ls
 ========
 
-description
+description  (<b> currently </b> working on integrating the twitter option too )
 ------------
 
 A simple app that plays songs in gaana.com according to your likes(fetched from facebook).
