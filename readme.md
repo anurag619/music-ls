@@ -30,9 +30,9 @@ run the script::
 let the script choose songs for you.
 
 2. <b> adding your own names </b>
-<ul>as if now one name (song/artist) is supported. 
-Ex: 'akon'
-After the gaana.com is opened you will have to the play bottom.<ul>
+<li>as if now, only one name (song/artist) is supported. 
+<i> Ex:- Enter your song/artist: 'akon' .</i> Please observe the colon.
+After the gaana.com is opened you will have to the play bottom.<li>
 
 3. <b> For the script to play your songs </b>
 <ul>The app will ask you to log into facebook, if you are not logged in. In case you are, you will then have to give 
