@@ -44,4 +44,4 @@ you will then have to give permissions to it.
  According to your likes in facebook 'music' column, the songs will be played in gaana.com. 
 However you will have to click the 'play' bottom to start playing. :)  <ul>
 
-
+Note:- <i> There might be some sort of advertisement/promotion by gaana.com try removing them manually. The script cannot do anything about it.
