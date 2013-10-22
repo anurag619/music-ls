@@ -7,6 +7,7 @@ description
 
 (currently working on integrating the twitter option too )
 
+<h2>there has been a change in the Gaana.com site, the script will not work at present. I am working on it.</h2>
 
 A simple app that plays songs in gaana.com according to your likes(fetched from facebook).
 In another option you can also add your song/artist to play.
